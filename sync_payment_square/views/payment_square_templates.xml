@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="square_form">
+        <input type="hidden" name="data_set" t-att-data-action-url="tx_url" data-remove-me=""/>
+        <input type="hidden" name="redirect_url" t-att-value='redirect_url' />
+        <input type="hidden" name="acquirer_id" t-att-value='acquirer.id' />
+        <input type="hidden" name="partner" t-att-value='partner' />
+        <input type="hidden" name="reference" t-att-value='reference' />
+        <input type="hidden" name="partner_email" t-att-value='partner_email' />
+        <input type="hidden" name="currency" t-att-value='currency and currency.name' />
+        <input type="hidden" name="amount" t-att-value='amount' />
+
+        <input type="hidden" name="square_application_id" t-att-value="square_application_id" />
+        <input type="hidden" name="square_access_token" t-att-value="square_access_token" />
+        <input type="hidden" name="location_id" t-att-value="square_location_id" />
+
+        <input type="hidden" name="locale" t-att-value='partner_lang' />
+        <input type="hidden" name="first_name" t-att-value='partner_first_name' />
+        <input type="hidden" name="last_name" t-att-value='partner_last_name' />
+        <input type="hidden" name="address1" t-att-value='partner_address' />
+        <input type="hidden" name="address2" t-att-value='partner.street2' />
+        <input type="hidden" name="zip_code" t-att-value='partner_zip' />
+        <input type="hidden" name="city" t-att-value='partner_city' />
+        <input type="hidden" name="state" t-att-value='partner_state and partner_state.name' />
+        <input type="hidden" name="country" t-att-value='partner_country and partner_country.name' />
+        <input type="hidden" name="country_code" t-att-value='partner_country and partner_country.code' />
+        <input type="hidden" name="phone" t-att-value='partner_phone' />
+        <input type="hidden" name="email" t-att-value='billing_partner_email' />
+    </template>
+
+    <template id="square_s2s_form">
+        <input type="hidden" name="data_set" data-create-route="/payment/square/s2s/create_json_3ds"/>
+        <div id="form-container">
+            <div id="sq-card"></div>
+        </div>
+        <input type="hidden" name="acquirer_id" t-att-value="id"/>
+        <input t-if="return_url" type="hidden" name="return_url" t-att-value="return_url"/>
+        <input t-if="partner_id" type="hidden" name="partner_id" t-att-value="partner_id"/>
+        <input t-if="payment_nonce" type="hidden" name="payment_nonce" t-att-value="payment_nonce"/>
+        <input t-if="card_data" type="hidden" name="card_data" t-att-value="card_data"/>
+        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+        <input type="hidden" name="application_id" t-att-value="acq.sudo().square_application_id"/>
+        <input type="hidden" name="access_token" t-att-value="acq.sudo().square_access_token"/>
+    </template>
+
+    <template id="assets_frontend" inherit_id="web.assets_frontend">
+        <xpath expr="script[last()]" position="after">
+            <script type="text/javascript" src="/sync_payment_square/static/src/js/payment_form.js"></script>
+        </xpath>
+    </template>
+</odoo>

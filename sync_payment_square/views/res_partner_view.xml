@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Inherit res.partner form view for add our custom fields -->
+    <record id="view_partner_property_form_3" model="ir.ui.view">
+        <field name="name">res.partner.property.form.inherit_3</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='purchase']" position="after">
+                <group string="Square">
+                    <field name="square_customer_id"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

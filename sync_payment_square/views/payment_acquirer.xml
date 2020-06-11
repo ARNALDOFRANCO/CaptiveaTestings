@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="acquirer_form_square" model="ir.ui.view">
+        <field name="name">acquirer.form.square</field>
+        <field name="model">payment.acquirer</field>
+        <field name="inherit_id" ref="payment.acquirer_form"/>
+        <field name="arch" type="xml">
+            <xpath expr='//group[@name="acquirer"]' position='after'>
+                <group attrs="{'invisible': [('provider', '!=', 'square')]}">
+                    <group>
+                        <field name="square_application_id" attrs="{'required': [('provider', '=', 'square'), ('state', '!=', 'disabled')]}"/>
+                        <field name="square_location_id" attrs="{'required': [('provider', '=', 'square'), ('state', '!=', 'disabled')]}"/>
+                        <field name="square_access_token" attrs="{'required': [('provider', '=', 'square'), ('state', '!=', 'disabled')]}" password="True"/>
+                    </group>
+                </group>
+            </xpath>
+            <field name="save_token" position="attributes">
+                <attribute name="attrs">{'invisible': ['|','|', ('provider', '=', 'square'), ('token_implemented', '=', False), ('payment_flow', '=', 's2s')]}</attribute>
+            </field>
+            <field name="check_validity" position="attributes">
+                <attribute name="attrs">{'invisible': ['|', ('payment_flow', '!=', 's2s'), ('provider', '=', 'square')]}</attribute>
+            </field>
+        </field>
+    </record>
+
+    <record id="transaction_form_square" model="ir.ui.view">
+        <field name="name">acquirer.transaction.form.square</field>
+        <field name="model">payment.transaction</field>
+        <field name="inherit_id" ref="payment.transaction_form"/>
+        <field name="arch" type="xml">
+            <field name="date" position="after">
+                <field name="square_order_id" attrs="{'invisible': [('provider', '!=', 'square')]}"/>
+            </field>
+        </field>
+    </record>
+</odoo>

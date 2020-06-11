@@ -1,0 +1,613 @@
+<section class="oe_container">
+    <div class="oe_row">
+        <div class="oe_row oe_spaced">
+            <h2 class="oe_slogan" style="color: #1b394e">Integration of Square Payment Acquirer with Odoo</h2>
+            <div class="oe_row oe_spaced">
+                <div class="oe_span12" style="font-size: large;">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <p>Square is a united states payment gateway service provider allowing merchants to accept credit card payments through their website and over an Internet Protocol connection.</p>
+                            <p>This module provides functionality for portal customers to make payments with using Square payment acquirer.</p>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="box_data" style="background-color:#F0F4F7;color: #875A7B">
+                                <h4 style="text-align: center;padding-top: 15px;">This module is compatible with.</h4>
+                                <ul style="padding: 20px;">
+                                    <li class="Community" style="list-style: none;margin-bottom: 15px;">
+                                        <span style="margin-right: 10px;"><img src="tick.svg" style="width: 25px;height: 25px;"/></span>
+                                        <span>Community</span>
+                                    </li>
+                                    <li class="Enterprise" style="list-style: none;margin-bottom: 15px;">
+                                        <span style="margin-right: 10px;"><img src="tick.svg" style="width: 25px;height: 25px;"/></span>
+                                        <span>Enterprise</span>
+                                    </li>
+                                    <li class="odoo_sh" style="list-style: none;margin-bottom: 15px;">
+                                        <span style="margin-right: 10px;"><img src="tick.svg" style="width: 25px;height: 25px;"/></span>
+                                        <span>Odoo.sh</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container" style="font-family: opensanslite; src:('OpenSans-Light.tff')">
+    <div>
+        <center>
+            <h2 class="panel-title" style="font-size: 30px; color: #1b394e; margin: 20px auto">
+                <img src="icon_1.png" height="45px" width="45px"> Key Features
+            </h2>
+        </center>
+        <div style="border-bottom: 2px solid #1b394e; width: 20%; margin: 10px auto"></div>
+        <div style="font-family: sans-serif;font-size: 18px;margin-top: 15px; text-align: left;">
+            <ul>
+                <div>
+                    <i class="fa fa-check" style="color: #1b394e;font-size: 15px;"></i> Do payment within Odoo website or redirect to Square website.
+                </div>
+                <div>
+                    <i class="fa fa-check" style="color: #1b394e;font-size: 15px;"></i> Customer can 'Add/Delete' credit card details.
+                </div>
+                <div>
+                    <i class="fa fa-check" style="color: #1b394e;font-size: 15px;"></i> Do payment via payment tokenizer.
+                </div>
+            </ul>
+        </div><br/>
+    </div>
+</section>
+
+<section class="oe_container" style="font-family: opensanslite; src:('OpenSans-Light.tff')">
+    <div>
+        <center>
+            <h2 class="panel-title" style="font-size: 30px; color: #1b394e; margin: 20px auto">
+                <img src="icon_2.png" height="45px" width="45px"> Configuration on Square Side
+            </h2>
+        </center>
+        <div style="border-bottom: 2px solid #1b394e; width: 20%; margin: 15px auto"></div>
+        <div style="font-family: sans-serif;font-size: 18px;margin-top: 15px;margin-left: 15px; text-align: left;">
+            <i class="fa fa-hand-o-right"></i> Configure your Square sandbox account and take access token, location id and application id from Square sandbox.<br>
+        </div>
+        <div style="color: #444; margin-top: 15px;">
+            <div style="margin-top: 15px;box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);margin: 15px;">
+                <img src="screen01.png" style="width: 100%; height: auto">
+            </div>
+            <div style="margin-top: 15px;box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);margin: 15px;">
+                <img src="screen02.png" style="width: 100%; height: auto">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container" style="font-family: opensanslite; src:('OpenSans-Light.tff')">
+    <div>
+        <center>
+            <h2 class="panel-title" style="font-size: 30px; color: #1b394e; margin: 20px auto">
+                <img src="icon_3.png" height="45px" width="45px"> Odoo Configuration
+            </h2>
+        </center>
+        <div style="border-bottom: 2px solid #1b394e; width: 20%; margin: 15px auto"></div>
+        <div style="font-family: sans-serif;font-size: 18px;margin-top: 15px;margin-left: 15px; text-align: left;">
+            <i class="fa fa-hand-o-right"></i> Configure Square credentials.<br/>
+        </div>
+        <div style="color: #444; margin-top: 15px;">
+            <div style="margin-top: 15px;box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);margin: 15px;">
+                <img src="screen03.png" style="width: 100%; height: auto">
+            </div><br/>
+        </div>
+        <div style="font-family: sans-serif;font-size: 18px;margin-top: 15px;margin-left: 15px; text-align: left;">
+            <i class="fa fa-hand-o-right"></i> Select payment method and payment flow<br/>
+            <b>Payment Flow</b><br/>
+            1. Redirection to the acquirer website: Payment time redirect to Square page.<br/>
+            2. Payment from Odoo: Credit card details collect from the Odoo and send it to Square.<br/>
+        </div>
+        <div style="color: #444; margin-top: 15px;">
+            <div style="margin-top: 15px;box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);margin: 15px;">
+                <img src="screen04.png" style="width: 100%; height: auto">
+            </div><br />
+        </div>
+    </div>
+</section>
+
+<section class="oe_container" style="font-family: opensanslite; src:('OpenSans-Light.tff')">
+    <div>
+        <center>
+            <h2 class="panel-title" style="font-size: 30px; color: #1b394e; margin: 20px auto">
+                <img src="icon_4.png" height="45px" width="45px"> Payment Transaction with Square (Redirection Flow)
+            </h2>
+        </center>
+        <div style="border-bottom: 2px solid #1b394e; width: 20%; margin: 15px auto"></div>
+        <h3 style="text-align: left; margin-bottom: 10px;font-size:20px;font-weight: 600;">1) Shop Payment
+            </h3>
+        <div style="font-family: sans-serif;font-size: 18px;margin-top: 15px;margin-left: 15px; text-align: left;">
+            Shop items and select Square payment acquirer and click on <b>Pay Now</b> button, it will redirect to Square payment screen.
+        </div>
+        <div style="color: #444; margin-top: 15px;">
+            <div style="margin-top: 15px;box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);margin: 15px;">
+                <img src="screen05.png" style="width: 100%; height: auto">
+            </div><br />
+        </div>
+        <div style="font-family: sans-serif;font-size: 18px;margin-top: 15px;margin-left: 15px; text-align: left;">
+            <i class="fa fa-hand-o-right"></i> Fill credit card details and click on <b>'Place Order'</b> button.
+        </div>
+        <div style="color: #444; margin-top: 15px;">
+            <div style="margin-top: 15px;box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);margin: 15px;">
+                <img src="screen06.png" style="width: 100%; height: auto">
+            </div><br />
+        </div>
+        <div style="font-family: sans-serif;font-size: 18px;margin-top: 15px;margin-left: 15px; text-align: left;">
+            <i class="fa fa-hand-o-right"></i> Order is done in Odoo.
+        </div>
+        <div style="color: #444; margin-top: 15px;">
+            <div style="margin-top: 15px;box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);margin: 15px;">
+                <img src="screen07.png" style="width: 100%; height: auto">
+            </div><br />
+        </div>
+        <div style="font-family: sans-serif;font-size: 18px;margin-top: 15px;margin-left: 15px; text-align: left;">
+            <i class="fa fa-hand-o-right"></i> Check transaction successfully done.
+        </div>
+        <div style="color: #444; margin-top: 15px;">
+            <div style="margin-top: 15px;box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);margin: 15px;">
+                <img src="screen08.png" style="width: 100%; height: auto">
+            </div><br />
+        </div>
+        <div style="font-family: sans-serif;font-size: 18px;margin-top: 15px;margin-left: 15px; text-align: left;">
+            <i class="fa fa-hand-o-right"></i> Transaction is successfully created on Square side.
+        </div>
+        <div style="color: #444; margin-top: 15px;">
+            <div style="margin-top: 15px;box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);margin: 15px;">
+                <img src="screen09.png" style="width: 100%; height: auto">
+            </div><br />
+        </div>
+    </div>
+</section>
+
+<section class="oe_container" style="font-family: opensanslite; src:('OpenSans-Light.tff')">
+    <div>
+        <br />
+        <h3 style="text-align: left; margin-bottom: 10px;font-size:20px;font-weight: 600;">2) Invoice Payment
+            </h3>
+        <div style="font-family: sans-serif;font-size: 18px;margin-top: 15px;margin-left: 15px; text-align: left;">
+            <i class="fa fa-hand-o-right"></i> <b>Path :</b> My Account -> Invoices<br/>
+            Select invoice and click on Pay Now button.<br/>
+        </div>
+        <div style="color: #444; margin-top: 15px;">
+            <div style="margin-top: 15px;box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);margin: 15px;">
+                <img src="screen10.png" style="width: 100%; height: auto">
+            </div><br />
+        </div>
+        <div style="font-family: sans-serif;font-size: 18px;margin-top: 15px;margin-left: 15px; text-align: left;">
+            <i class="fa fa-hand-o-right"></i> Check invoice details and select Square payment acquirer and click on <b>'Pay Now'</b> button, it will redirect to Square payment screen.
+        </div>
+        <div style="color: #444; margin-top: 15px;">
+            <div style="margin-top: 15px;box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);margin: 15px;">
+                <img src="screen11.png" style="width: 100%; height: auto">
+            </div><br />
+        </div>
+        <div style="font-family: sans-serif;font-size: 18px;margin-top: 15px;margin-left: 15px; text-align: left;">
+            <i class="fa fa-hand-o-right"></i> Fill credit card details and click on <b>'Place Order'</b> button.
+        </div>
+        <div style="color: #444; margin-top: 15px;">
+            <div style="margin-top: 15px;box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);margin: 15px;">
+                <img src="screen12.png" style="width: 100%; height: auto">
+            </div><br />
+        </div>
+        <div style="font-family: sans-serif;font-size: 18px;margin-top: 15px;margin-left: 15px; text-align: left;">
+            <i class="fa fa-hand-o-right"></i> Check invoice details.
+        </div>
+        <div style="color: #444; margin-top: 15px;">
+            <div style="margin-top: 15px;box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);margin: 15px;">
+                <img src="screen13.png" style="width: 100%; height: auto">
+            </div><br />
+        </div>
+        <div style="font-family: sans-serif;font-size: 18px;margin-top: 15px;margin-left: 15px; text-align: left;">
+            <i class="fa fa-hand-o-right"></i> Check transaction details.
+        </div>
+        <div style="color: #444; margin-top: 15px;">
+            <div style="margin-top: 15px;box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);margin: 15px;">
+                <img src="screen14.png" style="width: 100%; height: auto">
+            </div><br />
+        </div>
+        <div style="font-family: sans-serif;font-size: 18px;margin-top: 15px;margin-left: 15px; text-align: left;">
+            <i class="fa fa-hand-o-right"></i> Transaction is successfully created on Square side.
+        </div>
+        <div style="color: #444; margin-top: 15px;">
+            <div style="margin-top: 15px;box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);margin: 15px;">
+                <img src="screen15.png" style="width: 100%; height: auto">
+            </div><br />
+        </div>
+    </div>
+</section>
+
+<section class="oe_container" style="font-family: opensanslite; src:('OpenSans-Light.tff')">
+    <div>
+        <center>
+            <h2 class="panel-title" style="font-size: 30px; color: #1b394e; margin: 20px auto">
+                <img src="icon_5.png" height="45px" width="45px"> Save credit card in Odoo
+            </h2>
+        </center>
+        <div style="border-bottom: 2px solid #1b394e; width: 20%; margin: 15px auto"></div>
+        <div style="font-family: sans-serif;font-size: 18px;margin-top: 15px;margin-left: 15px; text-align: left;">
+            <i class="fa fa-hand-o-right"></i> <b>Path:</b> My Account -> Manage your payment methods<br/>
+        </div>
+        <div style="color: #444; margin-top: 15px;">
+            <div style="margin-top: 15px;box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);margin: 15px;">
+                <img src="screen16.png" style="width: 100%; height: auto">
+            </div><br />
+        </div>
+        <div style="font-family: sans-serif;font-size: 18px;margin-top: 15px;margin-left: 15px; text-align: left;">
+            <i class="fa fa-hand-o-right"></i> Fill credit card details and click on <b>'Add new card'</b> button for save card in Odoo.
+        </div>
+        <div style="color: #444; margin-top: 15px;">
+            <div style="margin-top: 15px;box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);margin: 15px;">
+                <img src="screen17.png" style="width: 100%; height: auto">
+            </div><br />
+        </div>
+        <div style="font-family: sans-serif;font-size: 18px;margin-top: 15px;margin-left: 15px; text-align: left;">
+            <i class="fa fa-hand-o-right"></i> Credit card save successfully in Odoo.
+        </div>
+        <div style="color: #444; margin-top: 15px;">
+            <div style="margin-top: 15px;box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);margin: 15px;">
+                <img src="screen18.png" style="width: 100%; height: auto">
+            </div><br />
+        </div>
+    </div>
+</section>
+
+<section class="oe_container" style="font-family: opensanslite; src:('OpenSans-Light.tff')">
+    <div>
+        <center>
+            <h2 class="panel-title" style="font-size: 30px; color: #1b394e; margin: 20px auto">
+                <img src="icon_6.png" height="45px" width="45px"> Payment Transaction with Square (Payment from Odoo flow)
+            </h2>
+        </center>
+        <div style="border-bottom: 2px solid #1b394e; width: 20%; margin: 15px auto"></div>
+        <h3 style="text-align: left; margin-bottom: 10px;font-size:20px;font-weight: 600;">1) Shop Payment
+            </h3>
+        <div style="font-family: sans-serif;font-size: 18px;margin-top: 15px;margin-left: 15px; text-align: left;">
+            <i class="fa fa-hand-o-right"></i> Select Square payment acquirer and fill all details and pay with save card.<br/>
+        </div>
+        <div style="color: #444; margin-top: 15px;">
+            <div style="margin-top: 15px;box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);margin: 15px;">
+                <img src="screen19.png" style="width: 100%; height: auto">
+            </div><br />
+        </div>
+        <div style="font-family: sans-serif;font-size: 18px;margin-top: 15px;margin-left: 15px; text-align: left;">
+            <i class="fa fa-hand-o-right"></i> Payment successfully done.
+        </div>
+        <div style="color: #444; margin-top: 15px;">
+            <div style="margin-top: 15px;box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);margin: 15px;">
+                <img src="screen20.png" style="width: 100%; height: auto">
+            </div><br />
+        </div>
+        <div style="font-family: sans-serif;font-size: 18px;margin-top: 15px;margin-left: 15px; text-align: left;">
+            <i class="fa fa-hand-o-right"></i> Check transaction details.
+        </div>
+        <div style="color: #444; margin-top: 15px;">
+            <div style="margin-top: 15px;box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);margin: 15px;">
+                <img src="screen21.png" style="width: 100%; height: auto">
+            </div><br />
+        </div>
+        <div style="font-family: sans-serif;font-size: 18px;margin-top: 15px;margin-left: 15px; text-align: left;">
+            <i class="fa fa-hand-o-right"></i> Transaction is successfully created on Square side.
+        </div>
+        <div style="color: #444; margin-top: 15px;">
+            <div style="margin-top: 15px;box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);margin: 15px;">
+                <img src="screen22.png" style="width: 100%; height: auto">
+            </div><br />
+        </div>
+    </div>
+</section>
+
+<section class="oe_container" style="font-family: opensanslite; src:('OpenSans-Light.tff')">
+    <div>
+        <br />
+        <h3 style="text-align: left; margin-bottom: 10px;font-size:20px;font-weight: 600;">2) Invoice Payment
+            </h3>
+        <div style="font-family: sans-serif;font-size: 18px;margin-top: 15px;margin-left: 15px; text-align: left;">
+            <i class="fa fa-hand-o-right"></i> Check invoice details and select card which is previously saved for Square payment acquirer and pay invoice.<br/>
+        </div>
+        <div style="color: #444; margin-top: 15px;">
+            <div style="margin-top: 15px;box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);margin: 15px;">
+                <img src="screen23.png" style="width: 100%; height: auto">
+            </div><br />
+        </div>
+        <div style="font-family: sans-serif;font-size: 18px;margin-top: 15px;margin-left: 15px; text-align: left;">
+            <i class="fa fa-hand-o-right"></i> Payment successfully done.
+        </div>
+        <div style="color: #444; margin-top: 15px;">
+            <div style="margin-top: 15px;box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);margin: 15px;">
+                <img src="screen24.png" style="width: 100%; height: auto">
+            </div><br />
+        </div>
+        <div style="font-family: sans-serif;font-size: 18px;margin-top: 15px;margin-left: 15px; text-align: left;">
+            <i class="fa fa-hand-o-right"></i> Check transaction details.
+        </div>
+        <div style="color: #444; margin-top: 15px;">
+            <div style="margin-top: 15px;box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);margin: 15px;">
+                <img src="screen25.png" style="width: 100%; height: auto">
+            </div><br />
+        </div>
+        <div style="font-family: sans-serif;font-size: 18px;margin-top: 15px;margin-left: 15px; text-align: left;">
+            <i class="fa fa-hand-o-right"></i> Transaction is successfully created on Square side.
+        </div>
+        <div style="color: #444; margin-top: 15px;">
+            <div style="margin-top: 15px;box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);margin: 15px;">
+                <img src="screen26.png" style="width: 100%; height: auto">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+             <h2 class="oe_slogan"><a href="http://www.synconics.com/" style="color: #000000 !important;">Suggested Products</a></h2>
+        </div>
+        <div class="col-md-4">
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div id="slider_data" class="row carousel slide mt64 mb32" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="min-height: 0px;">
+                <div class="col-xs-12 col-sm-4 col-md-4 mb16 mt16" style="float: left;
+                ">
+                    <a href="https://apps.odoo.com/apps/modules/11.0/payment_stripe_sale_ach/" target="_blank">
+                        <div style="box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);border-radius: 10px;text-align: center;">
+                           <img class="img img-responsive center-block" style="border-top-left-radius: 10px;border-top-right-radius: 10px;    height: 125px;" src="suggested_product/payment_stripe_sale_ach.png">
+                           <h4 class="mt0" style="padding:6% 4%;text-align: center;white-space: nowrap;width: 100%;overflow: hidden;text-overflow: ellipsis;font-family: Roboto-medium;">
+                              Sale Stripe ACH Payment Acquirer
+                           </h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 mb16 mt16" style="float: left;
+                ">
+                    <a href="https://apps.odoo.com/apps/modules/12.0/payment_stripe_ext/" target="_blank">
+                        <div style="box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);border-radius: 10px;text-align: center;">
+                           <img class="img img-responsive center-block" style="border-top-left-radius: 10px;border-top-right-radius: 10px;    height: 125px;" src="suggested_product/payment_stripe_ext.png">
+                           <h4 class="mt0" style="padding:6% 4%;text-align: center;white-space: nowrap;width: 100%;overflow: hidden;text-overflow: ellipsis;font-family: Roboto-medium;">
+                              Backend Stripe Payment
+                           </h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 mb16 mt16" style="float: left;
+                ">
+                    <a href="https://apps.odoo.com/apps/modules/11.0/stripe_charge/" target="_blank">
+                        <div style="box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);border-radius: 10px;text-align: center;">
+                           <img class="img img-responsive center-block" style="border-top-left-radius: 10px;border-top-right-radius: 10px;    height: 125px;" src="suggested_product/stripe_charge.png">
+                           <h4 class="mt0" style="padding:6% 4%;text-align: center;white-space: nowrap;width: 100%;overflow: hidden;text-overflow: ellipsis;font-family: Roboto-medium;">
+                              Stripe Charge
+                           </h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="carousel-item" style="min-height: 0px;">
+                <div class="col-xs-12 col-sm-4 col-md-4 mb16 mt16" style="float: left;
+                ">
+                    <a href="https://apps.odoo.com/apps/modules/11.0/payment_paytrail_acquirer/" target="_blank">
+                        <div style="box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);border-radius: 10px;text-align: center;">
+                           <img class="img img-responsive center-block" style="border-top-left-radius: 10px;border-top-right-radius: 10px;    height: 125px;" src="suggested_product/payment_paytrail_acquirer.png">
+                           <h4 class="mt0" style="padding:6% 4%;text-align: center;white-space: nowrap;width: 100%;overflow: hidden;text-overflow: ellipsis;font-family: Roboto-medium;">
+                              Paytrail Payment Acquirer
+                           </h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 mb16 mt16" style="float: left;
+                    ">
+                    <a href="https://apps.odoo.com/apps/modules/11.0/payment_stripe_ach/" target="_blank">
+                        <div style="box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);border-radius: 10px;text-align: center;">
+                           <img class="img img-responsive center-block" style="border-top-left-radius: 10px;border-top-right-radius: 10px;    height: 125px;" src="suggested_product/payment_stripe_ach.png">
+                           <h4 class="mt0" style="padding:6% 4%;text-align: center;white-space: nowrap;width: 100%;overflow: hidden;text-overflow: ellipsis;font-family: Roboto-medium;">
+                              Invoice Stripe ACH Payment Acquirer
+                           </h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 mb16 mt16" style="float: left;
+                ">
+                    <a href="https://apps.odoo.com/apps/modules/12.0/authorize_net/" target="_blank">
+                        <div style="box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);border-radius: 10px;text-align: center;">
+                           <img class="img img-responsive center-block" style="border-top-left-radius: 10px;border-top-right-radius: 10px;    height: 125px;" src="suggested_product/authorize_net.png">
+                           <h4 class="mt0" style="padding:6% 4%;text-align: center;white-space: nowrap;width: 100%;overflow: hidden;text-overflow: ellipsis;font-family: Roboto-medium;">
+                              Backend Payment Acquirer: Authorize.net
+                           </h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="carousel-item" style="min-height: 0px;">
+                <div class="col-xs-12 col-sm-4 col-md-4 mb16 mt16" style="float: left;
+                ">
+                    <a href="https://apps.odoo.com/apps/modules/12.0/authorize_net_import/" target="_blank">
+                        <div style="box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);border-radius: 10px;text-align: center;">
+                           <img class="img img-responsive center-block" style="border-top-left-radius: 10px;border-top-right-radius: 10px;    height: 125px;" src="suggested_product/authorize_net_import.png">
+                           <h4 class="mt0" style="padding:6% 4%;text-align: center;white-space: nowrap;width: 100%;overflow: hidden;text-overflow: ellipsis;font-family: Roboto-medium;">
+                              Import Customer Profile From Authorize.net
+                           </h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 mb16 mt16" style="float: left;
+                ">
+                    <a href="https://apps.odoo.com/apps/modules/11.0/sync_payment_moneris/" target="_blank">
+                        <div style="box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);border-radius: 10px;text-align: center;">
+                           <img class="img img-responsive center-block" style="border-top-left-radius: 10px;border-top-right-radius: 10px;    height: 125px;" src="suggested_product/sync_payment_moneris.png">
+                           <h4 class="mt0" style="padding:6% 4%;text-align: center;white-space: nowrap;width: 100%;overflow: hidden;text-overflow: ellipsis;font-family: Roboto-medium;">
+                              Integration of Moneris Payment Acquirer with Odoo
+                           </h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 mb16 mt16" style="float: left;
+                ">
+                    <a href="https://apps.odoo.com/apps/modules/9.0/sync_payment_paytabs/" target="_blank">
+                        <div style="box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);border-radius: 10px;text-align: center;">
+                           <img class="img img-responsive center-block" style="border-top-left-radius: 10px;border-top-right-radius: 10px;    height: 125px;" src="suggested_product/sync_payment_paytabs.png">
+                           <h4 class="mt0" style="padding:6% 4%;text-align: center;white-space: nowrap;width: 100%;overflow: hidden;text-overflow: ellipsis;font-family: Roboto-medium;">
+                              PayTabs Payment Acquirer
+                           </h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="carousel-item" style="min-height: 0px;">
+                <div class="col-xs-12 col-sm-4 col-md-4 mb16 mt16" style="float: left;
+                ">
+                    <a href="https://apps.odoo.com/apps/modules/11.0/payment_paymill_acquirer/" target="_blank">
+                        <div style="box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);border-radius: 10px;text-align: center;">
+                           <img class="img img-responsive center-block" style="border-top-left-radius: 10px;border-top-right-radius: 10px;    height: 125px;" src="suggested_product/payment_paymill_acquirer.png">
+                           <h4 class="mt0" style="padding:6% 4%;text-align: center;white-space: nowrap;width: 100%;overflow: hidden;text-overflow: ellipsis;font-family: Roboto-medium;">
+                              Paymill Payment Acquirer
+                           </h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 mb16 mt16" style="float: left;
+                ">
+                    <a href="https://apps.odoo.com/apps/modules/12.0/sync_payment_beanstream/" target="_blank">
+                        <div style="box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);border-radius: 10px;text-align: center;">
+                           <img class="img img-responsive center-block" style="border-top-left-radius: 10px;border-top-right-radius: 10px;    height: 125px;" src="suggested_product/sync_payment_beanstream.png">
+                           <h4 class="mt0" style="padding:6% 4%;text-align: center;white-space: nowrap;width: 100%;overflow: hidden;text-overflow: ellipsis;font-family: Roboto-medium;">
+                              Beanstream(Bambora) Payment Acquirer
+                           </h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#slider_data" data-slide="prev" style="left:-25px;width: 35px;color: #000;">
+        <span class="carousel-control-prev-icon"><i class="fa fa-chevron-left" style="font-size:24px"></i></span>
+        </a>
+        <a class="carousel-control-next" href="#slider_data" data-slide="next" style="right:-25px;width: 35px;color: #000;">
+        <span class="carousel-control-next-icon"><i class="fa fa-chevron-right" style="font-size:24px"></i></span>
+    </div>
+</section>
+
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced" style="width: 100%;">
+        <div class="oe_span12" style="width: 100%;">
+            <h2 class="oe_slogan">Free Support</h2>
+        </div>
+        <div class="oe_span12" style="width: 100%;">
+            <span>1) One month free bug support period will be offered pertaining to any one server used, testing or live.</span><br/>
+            <span>2) If an error appears in our app due to other custom modules installed in your system, we will charge for our efforts to resolve those errors. </span><br/>
+            <span>3) Please refer the document for configuration. If you need our support for configuration, please request our paid support. </span><br/>
+            <span>4) Please note that you are not allowed to distribute or resell this module after purchase. </span><br/>
+            <span>5) This module is tested and working on Odoo vanilla with Ubuntu OS. </span><br/>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span12">
+            <h2 class="oe_slogan"><a href="https://support.synconics.com/helpdesk/support-1/submit" style="color: #000000 !important;"> Get Help & Support</a></h2>
+        </div>
+        <div class="oe_slogan oe_spaced text-center">
+            <a class="btn btn-success mt8" title="Get Help !" style="background-color: rgb(31, 16, 140); color: rgb(255, 255, 255) !important; position: relative; overflow: hidden;" href="https://support.synconics.com/helpdesk/support-1/submit"><span class="o_ripple" style="height: 61px; width: 61px; top: -12.9688px; left: -8.76562px;"></span> Help & Support </a>&nbsp;&nbsp;
+            <a class="btn btn-success mt8" title="Request New Features now !" style="background-color: rgb(31, 16, 140); color: rgb(255, 255, 255) !important; position: relative; overflow: hidden;" href="http://www.synconics.com/opensource-erp-implementation-odoo-partner-india-gujarat-ahmedabad-expert-company-contact-us/"> Request New Features </a>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <div class="oe_slogan oe_spaced">
+            <span style="font-size: 20px">Checkout Other Apps Developed By Synconics Technologies <a href="https://apps.odoo.com/apps/modules/browse?search=synconics">Click Here</a></span>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span12" style="float: none;">
+            <h2 class="oe_slogan"><a href="http://www.synconics.com/" style="color: #000000 !important;"> Our Services</a></h2>
+        </div>
+        <div class="oe_menu" style="display: flex;justify-content: center;align-items: center;flex-wrap: wrap;">
+            <li class="oe_flex_li" style="flex: 0 0 30%;text-align: left;">
+                <a href="http://www.synconics.com/odoo-opensource-erp-onpremise-cloudhosting-installation-expert/">Odoo ERP Installation</a>
+            </li>
+            <li class="oe_flex_li" style="flex: 0 0 30%;text-align: left;">
+                <a href="http://www.synconics.com/odoo-opensource-erp-version-legacy-system-migration-upgradation-expert/">Odoo ERP Migration</a>
+            </li>
+            <li class="oe_flex_li" style="flex: 0 0 30%;text-align: left;">
+                <a href="http://www.synconics.com/organizational-digital-stratagy-legacy-system-transformation-modernisation/">Digital Stratagy</a>
+            </li>
+
+            <li class="oe_flex_li" style="flex: 0 0 30%;text-align: left;">
+                <a href="http://www.synconics.com/odoo-opensource-erp-module-configuration-setting-expert/">Odoo ERP configuration</a>
+            </li>
+            <li class="oe_flex_li" style="flex: 0 0 30%;text-align: left;">
+                <a href="http://www.synconics.com/odoo-opensource-erp-onsite-onpremise-remote-working-monthly-projectwise-dedicated-functional-technical-expert-resources/">Odoo ERP Staffing</a>
+            </li>
+            <li class="oe_flex_li" style="flex: 0 0 30%;text-align: left;">
+                <a href="http://www.synconics.com/organizational-business-process-reengineering-digital-transformation-system-application-technology-selection/">Digital Technology Selection</a>
+            </li>
+
+            <li class="oe_flex_li" style="flex: 0 0 30%;text-align: left;">
+                <a href="http://www.synconics.com/odoo-opensource-erp-module-customization-expert/">Odoo ERP Customization</a>
+            </li>
+            <li class="oe_flex_li" style="flex: 0 0 30%;text-align: left;">
+                <a href="http://www.synconics.com/odoo-opensource-erp-onpremise-remote-functional-training-by-expert-trainers/">Odoo Functional Training</a>
+            </li>
+            <li class="oe_flex_li" style="flex: 0 0 30%;text-align: left;">
+                <a href="http://www.synconics.com/organisational-digital-transformation-system-application-technology-selection-implementation/">Digital Transformation Implementation</a>
+            </li>
+
+            <li class="oe_flex_li" style="flex: 0 0 30%;text-align: left;">
+                <a href="http://www.synconics.com/odoo-opensource-erp-new-module-product-development-expert/">Odoo ERP New Module Development</a>
+            </li>
+            <li class="oe_flex_li" style="flex: 0 0 30%;text-align: left;">
+                <a href="http://www.synconics.com/odoo-opensource-erp-onpremise-remote-technical-training-by-expert-trainers/">Odoo ERP Technical Training</a>
+            </li>
+            <li class="oe_flex_li" style="flex: 0 0 30%;text-align: left;">
+                <a href="http://www.synconics.com/organizational-business-process-reengineering-digital-transformation-legacy-system-application-technology-migration-modernisation/">Legacy Modernization</a>
+            </li>
+
+            <li class="oe_flex_li" style="flex: 0 0 30%;text-align: left;">
+                <a href="http://www.synconics.com/odoo-opensource-erp-integration-e-commerce-payment-gateway-document-management-shipping-accounting/">Odoo ERP Integrations</a>
+            </li>
+            <li class="oe_flex_li" style="flex: 0 0 30%;text-align: left;">
+                <a href="http://www.synconics.com/odoo-opensource-erp-expert-support-services/">Odoo ERP Support</a>
+            </li>
+            <li class="oe_flex_li" style="flex: 0 0 30%;text-align: left;">
+                <a href="http://www.synconics.com/organizational-business-process-reengineering-digital-transformation/">Organizational Transformation</a>
+            </li>
+
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced text-center">
+        <div class="oe_span12">
+            <span style="font-size: 20px;text-align: right;"><h2 class="oe_slogan"><a href="http://www.synconics.com/" style="color: #000000 !important;"> Our Contact Details</a></h2></span>
+            <span class="o_ripple" style="background-color: rgb(31, 16, 140); color: rgb(255, 255, 255) !important; position: relative; overflow: hidden;height: 61px; width: 61px; top: -12.9688px; font-size: 18px;text-align: right;padding: 6px 12px;border-radius: 4px;border: 1px solid transparent;border-color: #4cae4c;z-index: 1;">
+                     E-mail :
+                    <a href="http://www.synconics.com/opensource-erp-implementation-odoo-partner-india-gujarat-ahmedabad-expert-company-contact-us/" style="color: rgb(255, 255, 255) !important;">contact@synconics.com</a> |
+                    Skype : synconics.technologies  |
+                    Mobile : +91-942-686-4274
+            </span>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span12">
+            <span style="font-size: 20px">For product demo, please generate a ticket and mention your preferred time and date. Please make sure the demo timing you mentioned are as per Indian Standard Time (IST), between 10:30 AM to 7:00 PM (IST), Monday to Friday.</span>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="payment_acquirer_square" model="payment.acquirer">
+        <field name="name">Square</field>
+        <field name="image_128" type="base64" file="sync_payment_square/static/src/img/square_icon.jpg"/>
+        <field name="provider">square</field>
+        <field name="company_id" ref="base.main_company"/>
+        <field name="token_implemented">False</field>
+        <field name="payment_flow">form</field>
+        <field name="view_template_id" ref="square_form"/>
+        <field name="registration_view_template_id" ref="square_s2s_form"/>
+        <field name="description" type="html">
+            <p>
+                Square Payment Services supports credit cards, debit cards.
+            </p>
+            <ul class="list-inline">
+                <li><i class="fa fa-check"/>eCommerce</li>
+                <li><i class="fa fa-check"/>Cards storage</li>
+            </ul>
+        </field>
+    </record>
+</odoo>

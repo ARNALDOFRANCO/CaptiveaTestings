@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="payment_tokens_list_square" inherit_id="payment.payment_tokens_list">
+        <t t-else="acq.payment_flow == 's2s'" position="replace">
+            <t t-else="acq.payment_flow == 's2s'">
+                <input type="radio" t-att-data-acquirer-id="acq.id"
+                       t-att-data-s2s-payment="true"
+                       t-att-data-provider="acq.provider"
+                       name="pm_id" t-attf-value="new_{{acq.id}}" t-att-data-state="acq.state"
+                       t-att-class="'d-none' if (acquirers_count==1 and pms_count==0) else ''"
+                       t-att-checked="acquirers_count==1 and pms_count==0 or acquirers[0] == acq"/>
+            </t>
+        </t>
+    </template>
+</odoo>
